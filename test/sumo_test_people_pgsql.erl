@@ -28,7 +28,9 @@
     status/1,
     weird_field1/1,
     weird_field2/1,
-    weird_field3/1
+    weird_field3/1,
+    bignit_field/1,
+    json_field/1
   ]}
 ]).
 
@@ -56,6 +58,8 @@ sumo_schema() ->
      sumo:new_field(weird_field1,  custom, [{type, term}]),
      sumo:new_field(weird_field2,  custom, [{type, list}]),
      sumo:new_field(weird_field3,  custom, [{type, map}]),
+     sumo:new_field(bignit_field,  bigint),
+     sumo:new_field(json_field,    json),
      sumo:new_field(missing,       boolean)
     ],
   sumo:new_schema(people, Fields).
