@@ -412,6 +412,8 @@ create_column(Name, binary, Attrs) ->
   [escape(atom_to_list(Name)), " BYTEA ", create_column_options(Attrs)];
 create_column(Name, string, Attrs) ->
   [escape(atom_to_list(Name)), " VARCHAR ", create_column_options(Attrs)];
+create_column(Name, json, Attrs) ->
+  [escape(atom_to_list(Name)), " JSON ", create_column_options(Attrs)];
 create_column(Name, date, Attrs) ->
   [escape(atom_to_list(Name)), " DATE ", create_column_options(Attrs)];
 create_column(Name, datetime, Attrs) ->
